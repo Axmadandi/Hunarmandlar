@@ -135,175 +135,32 @@
     		</div><!--main title-->
     		<div class="container-fluid mt-3"><!--container-fluid-->
     			<div class="row rows1">
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
+					
+					{% for cat in cats %}
+						<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
     					<div class="contains">
     						 <h1 class="countsH1">
-    						 	 01
+    						 	 0{{forloop.counter}}
     						 </h1>
     						 <p class="titlecols">
-    						 	Kulolchilik
+    						 	{{cat.title}}
     						 </p>
     						 <span class="describtions">
-    						 	Kulolchilik buyumlari va<br class="brs">
-    						 	sopol idishlar
+    						 	{{cat.sub_title}}
     						 </span>
-    						 <div class="colsIMGs colsIMGs1">
+    						 <div class="colsIMGs" style="background-image: url({{cat.img.url}});">
     						    <a href="/static/index2.html" target="_blank">
-    						 	   <button class="btnshows">
-    						 	      Mahsulotni ko'rish
-    						     </button>
+    						 	   <a href="{% url 'main:cat_detail' cat.slug %}">
+    						 	    <button class="btnshows">Mahsulotni ko'rish</button>
+    						     	</a>
     						    </a>
     						 </div>
     					</div>
     				</div>
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
-    					<div class="contains">
-    						 <h1 class="countsH1">
-    						 	 02
-    						 </h1>
-    						 <p class="titlecols">
-    						 	To'qimachilik
-    						 </p>
-    						 <span class="describtions">
-    						 	Kulolchilik buyumlari va<br class="brs">
-    						 	sopol idishlar
-    						 </span>
-    						 <div class="colsIMGs colsIMGs2">
-    						    <a href="/static/index4.html" target="_blank">
-    						 	   <button class="btnshows">
-    						 	      Mahsulotni ko'rish
-    						     </button>
-    						    </a>
-    						 </div>
-    					</div>
-    				</div>
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
-    					<div class="contains">
-    						 <h1 class="countsH1">
-    						 	 03
-    						 </h1>
-    						 <p class="titlecols">
-    						 	Xattotlik
-    						 </p>
-    						 <span class="describtions">
-    						 	Kulolchilik buyumlari va<br class="brs">
-    						 	sopol idishlar
-    						 </span>
-    						 <div class="colsIMGs colsIMGs3">
-    						    <a href="/static/index4.html" target="_blank">
-    						 	   <button class="btnshows">
-    						 	      Mahsulotni ko'rish
-    						     </button>
-    						    </a>
-    						 </div>
-    					</div>
-    				</div>
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
-    					<div class="contains">
-    						 <h1 class="countsH1">
-    						 	 04
-    						 </h1>
-    						 <p class="titlecols">
-    						 	Zargarlik
-    						 </p>
-    						 <span class="describtions">
-    						 	Kulolchilik buyumlari va<br class="brs">
-    						 	sopol idishlar
-    						 </span>
-    						 <div class="colsIMGs colsIMGs4">
-    						    <a href="/static/index4.html" target="_blank">
-    						 	   <button class="btnshows">
-    						 	      Mahsulotni ko'rish
-    						     </button>
-    						    </a>
-    						 </div>
-    					</div>
-    				</div>
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
-    					<div class="contains">
-    						 <h1 class="countsH1">
-    						 	 05
-    						 </h1>
-    						 <p class="titlecols">
-    						 	Haykaltaroshlik
-    						 </p>
-    						 <span class="describtions">
-    						 	Kulolchilik buyumlari va<br class="brs">
-    						 	sopol idishlar
-    						 </span>
-    						 <div class="colsIMGs colsIMGs5">
-    						    <a href="/static/index4.html" target="_blank">
-    						 	   <button class="btnshows">
-    						 	      Mahsulotni ko'rish
-    						     </button>
-    						    </a>
-    						 </div>
-    					</div>
-    				</div>
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
-    					<div class="contains">
-    						 <h1 class="countsH1">
-    						 	 06
-    						 </h1>
-    						 <p class="titlecols">
-    						 	Yog'och o'ymakorlik
-    						 </p>
-    						 <span class="describtions">
-    						 	Kulolchilik buyumlari va<br class="brs">
-    						 	sopol idishlar
-    						 </span>
-    						 <div class="colsIMGs colsIMGs6">
-    						    <a href="/static/index4.html" target="_blank">
-    						 	   <button class="btnshows">
-    						 	      Mahsulotni ko'rish
-    						     </button>
-    						    </a>
-    						 </div>
-    					</div>
-    				</div>
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
-    					<div class="contains">
-    						 <h1 class="countsH1">
-    						 	07 
-    						 </h1>
-    						 <p class="titlecols">
-    						 	Rassomchilik
-    						 </p>
-    						 <span class="describtions">
-    						 	Kulolchilik buyumlari va<br class="brs">
-    						 	sopol idishlar
-    						 </span>
-    						 <div class="colsIMGs colsIMGs7">
-    						    <a href="/static/index4.html" target="_blank">
-    						 	   <button class="btnshows">
-    						 	      Mahsulotni ko'rish
-    						     </button>
-    						    </a>
-    						 </div>
-    					</div>
-    				</div>
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">8</div>
-    				<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
-    					<div class="contains">
-    						 <h1 class="countsH1">
-    						 	 08
-    						 </h1>
-    						 <p class="titlecols">
-    						  Temirchilik
-    						 </p>
-    						 <span class="describtions">
-    						 	Kulolchilik buyumlari va<br class="brs">
-    						 	sopol idishlar
-    						 </span>
-    						 <div class="colsIMGs colsIMGs8">
-    						    <a href="/static/index4.html" target="_blank">
-    						 	   <button class="btnshows">
-    						 	      Mahsulotni ko'rish
-    						     </button>
-    						    </a>
-    						 </div>
-    					</div>
-    				</div>
+					{% endfor %}
+						
+    				
+    				
     			</div>
     		</div><!--container-fluid-->
     		<div class="mainTitle2"><!--main title-->
